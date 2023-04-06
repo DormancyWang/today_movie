@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'http', '~> 5.1', '>= 5.1.1'
 gem 'nokogiri', '~> 1.14', '>= 1.14.2'
 gem "haml-rails", "~> 2.0"
-
+gem 'mongoid', '~> 7.0.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
