@@ -1,0 +1,39 @@
+.items
+  - @movies.each do |movie|
+    .item
+      = image_tag(movie[:cover_url], class: :cover, referrerpolicy: :never)
+      =link_to movie.title, movie.detail_url, class: :title
+      .release= movie.release
+      .region= movie.region
+      .rating{class: "#{movie.rating.to_f > 7.5 ? 'red': ''}"}= movie.rating
+
+
+:css
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cover {
+    width: 100px;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+  }
+  .title {
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .red {
+    color: red;
+  }
